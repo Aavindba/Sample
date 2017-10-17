@@ -1,0 +1,60 @@
+var me= {
+
+name:'abc',
+
+Myname: function(){console.log(this.name)}
+
+}
+
+me.name;\\ abc
+me.Myname;\\function(){console.log(this.name)}
+
+
+me.Myname();\\abc
+-----------------------------------------------------
+var a = {
+
+    name:'FirstName',
+
+    last:'LastName',
+
+    age:50,
+
+     b:function(){console.log(this.name+" " + this.last + " is " + this.age + " years old" )}
+
+    
+}
+
+a.b(); \\FirstName LastName is 50 years old
+-----------------------------------------------------
+var a = {
+
+
+    name:'FirstName',
+
+
+    last:'LastName',
+
+
+    age:50,
+
+
+     b:function(){console.log(this['name']+" "  + this["last"] + " is " + this['age'] + " years old" )}
+
+
+    
+}
+
+a.b();\\ FirstName LastName is 50 years old
+------------------------------------------------------
+
+-------------------------------------------------------
+Doubt
+-------------------------------------------------------
+var txt = "";
+var person = {fname:"John", lname:"Doe", age:25}; 
+var x;
+for (x in person) {
+    txt += person[x] + " ";
+}
+------------------------------------------------------
