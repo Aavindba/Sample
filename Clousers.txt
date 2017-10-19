@@ -1,0 +1,35 @@
+var clientdata ={
+		id:094545,
+		fullName:"Not Set",
+		setUserName: function(firstName,lastName){
+		this.fullName = firstName + " " + lastName;
+		}
+}
+
+function getUserInput(firstName, lastName, callback){
+	callback(firstName, lastName);
+}
+
+getUserInput("Barack","obama", clientdata.setUserName);
+
+console.log(clientdata.fullName);// Not Set
+console.log(window.fullName);//Barack obama
+-------
+console.log(clientdata)//{id: 94545, fullName: "Not Set", setUserName: ƒ}
+console.log (window.fullName)
+// Barack obama
+---------------------------------------------------------------------
+var clientData ={
+		id:094545,
+		fullName: "Not Set",
+		setUserName: funcion(firstName, lastName) {
+		this.fullName = firstName+" "+ lastName;
+		}
+}
+
+function getUserInput(firstName, lastName, callback,callbackobj) {
+		callback.apply(callbackobj,[firstName, lastName]);
+} 
+
+getUserInput ("Barack","Obama",clientData.setUserName,clientData);
+console.log(clientData.fulName);
