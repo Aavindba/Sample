@@ -1,0 +1,29 @@
+ var callAnswered = "false";
+
+var call =new promise(function(answered,dont)
+		{
+		if (callAnswerd){
+			var response =
+					{
+					name: 'David',
+					place: 'Las Vegas',
+
+					}
+				
+			answered.call(response);
+			}
+		else {
+			var notanswerd= "not reachable"
+			dont(notanswered);
+			}
+		}
+);
+
+Var answered = function()
+		{
+		console.log(this.name +"Planed to visit"+ this.place )
+		};
+var dont = function()
+		{
+		console.log("Plan canceled because person is "+ notanswered )
+		};
